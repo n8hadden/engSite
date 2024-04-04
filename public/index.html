@@ -13,7 +13,13 @@
         .section {
             padding: 60px 0;
         }
+        .no-text-decoration {
+            text-decoration: none !important;
+        }
         </style>
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     </head>
     <body>
 
@@ -38,7 +44,7 @@
                         <div class="carousel-item">
                             <img src="./house2.jpeg" class="d-block w-100" alt="...">
                             <br>
-                            <p>The mortgage rate on a 30-year home loan soared from 3 ½ percent in early 2022 to nearly 8% in October 2023 as the Federal Reserve raised policy interest rates</p>
+                            <p>The mortgage rate on a 30-year home loan soared from 3 ½ percent in early 2022 to nearly 8% in October 2023 as the Federal Reserve raised policy interest rates.</p>
                         </div>
                         <div class="carousel-item">
                             <img src="./house3.jpeg" class="d-block w-100" alt="...">
@@ -96,18 +102,128 @@
         <!-- Budget Section -->
         <section id="budget" class="section">
             <div class="container">
-                <h4 class="mt-5">Budget Calculator Section</h4>
-                <p>It is important to remember key factors to be aware of when looking into an increasingly costly housing market: </p>
-                <ul class="list-unstyled">
-                <li><b>Down Payment:</b> Saving for a down payment is essential, as it's typically required upfront and can significantly impact affordability.</li><br>
-                    <li><b>Mortgage Payments:</b> Calculating mortgage payments accurately is crucial to ensure they fit within your budget and include principal, interest, taxes, and insurance (PITI).</li><br>
-                    <li><b>Property Taxes:</b> Understanding property tax rates in the area you're buying and anticipating potential increases is important for budgeting purposes.</li><br>
-                    <li><b>Homeowners Insurance:</b> Obtaining insurance quotes and including the cost of homeowners insurance in your budget is essential to protect your home and belongings.</li><br>
-                    <li><b>Private Mortgage Insurance (PMI):</b> If your down payment is less than 20%, budgeting for PMI, which adds to your monthly mortgage payments, is necessary.</li><br>
-                    <li><b>Home Maintenance and Repairs:</b> Budgeting for ongoing maintenance and setting aside funds for unexpected repairs can prevent financial strain as a homeowner.</li><br>
-                    <li><b>Utilities and Other Expenses:</b> Accounting for utilities, HOA fees, landscaping, and furnishings in your budget is important for accurately estimating homeownership costs.</li><br>
-                    <li><b>Emergency Fund:</b> Building and maintaining an emergency fund with three to six months' worth of living expenses is crucial to cover unexpected homeownership expenses or financial setbacks.</li>
-                </ul>
+                <h2 class="mt-5">Important Things To Know About The Housing Market</h2>
+                <div id="accordion">
+                    <!-- Card 1 -->
+                    <div class="card">
+                        <div class="card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link no-text-decoration" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    <p>Mortgage Payments: </p>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                Calculating mortgage payments accurately is crucial to ensure they fit within your budget and include principal, interest, taxes, and insurance (PITI).                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="card">
+                        <div class="card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed no-text-decoration" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <p>Property Taxes: </p>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                Understanding property tax rates in the area you're buying and anticipating potential increases is important for budgeting purposes.                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="card">
+                        <div class="card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed no-text-decoration" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <p>Down Payment: </p>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                Saving for a down payment is essential, as it's typically required upfront and can significantly impact affordability.                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 4 -->
+                    <div class="card">
+                        <div class="card-header" id="headingFour">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed no-text-decoration" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <p>Homeowners Insurance: </p>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                Obtaining insurance quotes and including the cost of homeowners insurance in your budget is essential to protect your home and belongings.                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 5 -->
+                    <div class="card">
+                        <div class="card-header" id="headingFive">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed no-text-decoration" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <p>Private Mortgage Insurance: </p>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                            <div class="card-body">
+                                If your down payment is less than 20%, budgeting for PMI, which adds to your monthly mortgage payments, is necessary.                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 6 -->
+                    <div class="card">
+                        <div class="card-header" id="headingSix">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed no-text-decoration" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    <p>Home Maintenance and Repairs: </p>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                            <div class="card-body">
+                                Budgeting for ongoing maintenance and setting aside funds for unexpected repairs can prevent financial strain as a homeowner.                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 7 -->
+                    <div class="card">
+                        <div class="card-header" id="headingSeven">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed no-text-decoration" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    <p>Utilities and Other Expenses: </p>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                            <div class="card-body">
+                                Accounting for utilities, HOA fees, landscaping, and furnishings in your budget is important for accurately estimating homeownership costs.                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 8 -->
+                    <div class="card">
+                        <div class="card-header" id="headingEight">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed no-text-decoration" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                <p>Emergency Fund: </p>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseEight" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                Building and maintaining an emergency fund with three to six months' worth of living expenses is crucial to cover unexpected homeownership expenses or financial setbacks.                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
